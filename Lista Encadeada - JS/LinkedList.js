@@ -179,33 +179,89 @@ class LinkedList {
         }
 
     }
+    // Cria a função que mostra no console a lista
+    printInvertedList() {
+        // Verifica se a lista não está vazia para printar
+        if (this.size >= 0) {
+            // Inicia as variáveis atual e string que guardará os nodos e os espaços entre os nodos para printar
+            let current = this.head;
+            let str = "";
+
+            // Enquanto a variavel atual não for nula, colocará o nodo + o espaçamento na string
+            while (current) {
+                str = " " + current.element + str;
+                current = current.next;
+            }
+            // Printa no console a lista
+            console.log(`List Inverted =${str}`);
+        }
+
+    }
     // destrói a lista zerando a cabeça e o tamanho
     destroy() {
         this.head = null;
         this.size = 0;
-        return console.log("Destroed the list");
+        return console.log("Destroyed the list");
+    }
+    listSize() {
+        return console.log(`The size of the list is ${this.size}`);
+    }
+    listCompare(list) {
+        // Verifica se o tamanho das listas são iguais
+        if (this.size === list.size) {
+            let count = 0;
+            let currentList1 = this.head;
+            let currentList2 = list.head;
+
+            // Percorre os nodos
+            while (count < this.size) {
+
+                // Verifica se o elemento atual é o elemento que está sendo procurado, retorna o índice
+                if (currentList1.element !== currentList2.element) {
+                    return console.log(false);
+                }
+                count++
+                currentList1 = currentList1.next;
+                currentList2 = currentList2.next;
+            }
+            // Retorna -1 caso não encontre o elemento
+            return console.log(true);
+        } else console.log(false);
+
     }
 }
 
 // Inicia a lista
 let list = new LinkedList();
+let list2 = new LinkedList();
 
 // Adiciona valores à lista
 list.add(2);
 list.add(3);
 list.add(5);
 
+list2.add(2);
+list2.add(3);
+list2.add(5);
+
+list.listCompare(list2);
+
 // Printa a lista no console
 list.printList();
+list.printInvertedList();
 
 // Remove o nodo no índice 2 e printa a lista sem o nodo
 list.removeFrom(2);
 list.value(1)
 list.printList();
+list.printInvertedList();
 
 // Insere o elemento 7 no nodo do índice 2 e printa no console
 list.insertAt(7, 2);
 list.printList();
+
+// Printa o tamanho da lista
+list.listSize();
 
 // destrói a lista de nodos e printa no console
 list.destroy();
