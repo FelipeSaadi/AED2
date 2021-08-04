@@ -1,0 +1,6 @@
+Abrir a pasta "Algoritmos de Soma e Multiplicação - JS" e abrir o arquivo index.html;
+Após abrir o arquivo, fazer o processo indicado na tela.
+
+PS: Caso tenha interesse em observar o código, basta abrir a pasta em uma IDE. Ex: Visual Studio Code.
+
+Requisitos: Ter um navegador de internet instalado.
