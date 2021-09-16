@@ -1,5 +1,16 @@
 "use strict"
 
+const fatorialIterativo = (valor, resultado = valor) => {
+    if (valor === 0) {
+        return 1
+    }
+    while (valor !== 1) {
+        valor--
+        resultado *= valor
+    }
+    return resultado
+}
+
 const fatorial = (valor, resultado = valor) => {
     if (valor === 0) {
         return 1
@@ -11,6 +22,10 @@ const fatorial = (valor, resultado = valor) => {
         return fatorial(valor - 1, resultado)
     }
 }
+
+console.log(fatorialIterativo(5))
+console.log(fatorialIterativo(8))
+console.log(fatorialIterativo(0))
 
 console.log(fatorial(5))
 console.log(fatorial(8))
