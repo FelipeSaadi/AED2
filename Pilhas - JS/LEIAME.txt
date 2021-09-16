@@ -1,0 +1,7 @@
+Todos os códigos foram importados no index.html.
+
+Passos para usar os códigos:
+Abrir o arquivo index.html em um navegador de sua preferência;
+Fazer o processo indicado na tela.
+
+PS: Para analisar os códigos, basta abrir a pasta "Pilhas - JS" em uma IDE. Ex: Visual Studio Code.
